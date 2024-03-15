@@ -8,7 +8,7 @@ const userQueue = new Queue('userQueue', 'redis://127.0.0.1:6379');
 
 class UsersController {
   static postNew(request, response) {
-    const { email , password} = request.body;
+    const { email, password } = request.body;
 
     if (!email) {
       response.status(400).json({ error: 'Missing email' });
